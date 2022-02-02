@@ -75,7 +75,7 @@ ENV ZEEKPATH .:/usr/local/zeek/share/zeek:/usr/local/zeek/share/zeek/policy:/usr
 ENV PATH $PATH:/usr/local/zeek/bin
 
 ARG ZKG_VERSION=2.7.1
-ARG ZEEK_DEFAULT_PACKAGES="bro-interface-setup bro-doctor ja3"
+ARG ZEEK_DEFAULT_PACKAGES="bro-interface-setup bro-doctor ja3 bzar"
 # install Zeek package manager
 RUN pip install zkg==$ZKG_VERSION \
     && zkg autoconfig \
