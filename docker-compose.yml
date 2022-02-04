@@ -21,7 +21,7 @@ services:
         target: /usr/local/zeek/logs
 
       - type: bind
-        source: ${NODCFG:-./etc/node.sample.cfg}
+        source: ${NODCFG:-./etc/node.cfg}
         target: /usr/local/zeek/etc/node.cfg
 
       # Uncomment this block if you want to customize the zeek scripts loaded
