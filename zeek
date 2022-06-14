@@ -67,6 +67,7 @@ init_zeek_cfg() {
 	fi
 	if [ ! -f "$HOST_ZEEK/share/zeek/site/autoload/100-default.zeek" ]; then
 		$SUDO docker exec $container cp -f /usr/local/zeek/share/zeek/site/autoload/100-default.zeek /zeek/share/zeek/site/autoload/100-default.zeek
+		$SUDO docker exec $container cp -f /usr/local/zeek/share/zeek/site/autoload/101-json.zeek /zeek/share/zeek/site/autoload/101-json.zeek
 	fi
 
 	# Copy all default autoload partials to the host, overwriting existing files
