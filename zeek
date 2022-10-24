@@ -60,7 +60,7 @@ init_zeek_cfg() {
 
 	# initialize config files that are commonly customized
 	if [ ! -f "$HOST_ZEEK/etc/networks.cfg" ]; then
-		$SUDO docker exec $container cp -f /usr/local/zeek/etc/networks.cfg /zeek/etc/networks.cfg
+		$SUDO docker exec $container cp -f /zeek/etc/networks.cfg /zeek/etc/networks.cfg
 	fi
 	if [ ! -f "$HOST_ZEEK/etc/zeekctl.cfg" ]; then
 		$SUDO docker exec $container cp -f /usr/local/zeek/etc/zeekctl.cfg /zeek/etc/zeekctl.cfg
